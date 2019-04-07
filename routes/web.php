@@ -15,6 +15,7 @@ Route::group(['prefix' => 'secure'], function () {
     Route::put('titles/{id}', 'TitlesController@update');
     Route::delete('titles', 'TitlesController@destroy');
 /////Test
+//Testlaptop
     // seasons
     Route::post('titles/{titleId}/seasons', 'SeasonsController@store');
     Route::delete('seasons/{seasonId}', 'SeasonsController@destroy');
