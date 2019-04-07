@@ -14,7 +14,7 @@ Route::group(['prefix' => 'secure'], function () {
     Route::delete('titles/credits/{id}', 'TitleCreditController@destroy');
     Route::put('titles/{id}', 'TitlesController@update');
     Route::delete('titles', 'TitlesController@destroy');
-
+/////Test
     // seasons
     Route::post('titles/{titleId}/seasons', 'SeasonsController@store');
     Route::delete('seasons/{seasonId}', 'SeasonsController@destroy');
