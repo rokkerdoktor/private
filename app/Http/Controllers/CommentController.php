@@ -14,12 +14,19 @@ class CommentController extends Controller
 
     public function show($id)
     {
-        return 'show';
+        return Comment::FindOrFail($id);
     }
 
-    public function update($id)
+    public function update(Request $request,$id)
     {
-        return 'update';
+        $comment = Comment::findOrFail($id);
+        $comment->title_id = $request->title_id;
+        $comment->user_id = $request->user_id;
+        $comment->comment = $request->comment;
+        $comment->season = $request->season;
+        $comment->episode = $request->episode;
+        $comment->save();
+
     }
     
     public function store(Request $request){
@@ -32,7 +39,8 @@ class CommentController extends Controller
         $comment->save();
     }
 
-    public function destroy(){
-        return 'destroy';
+    public function destroy($id){
+        $comment = Comment::findOrFail($id);
+        $comment->delete();
     }
 }

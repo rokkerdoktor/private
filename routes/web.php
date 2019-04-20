@@ -19,7 +19,7 @@ Route::group(['prefix' => 'secure'], function () {
     Route::get('comment/show/{id}', 'CommentController@show');
     Route::post('comment', 'CommentController@store');
     Route::put('comment/{id}', 'CommentController@update');
-    Route::delete('comment', 'CommentController@destroy');
+    Route::delete('comment/{id}', 'CommentController@destroy');
     // seasons
     Route::post('titles/{titleId}/seasons', 'SeasonsController@store');
     Route::delete('seasons/{seasonId}', 'SeasonsController@destroy');
