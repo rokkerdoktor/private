@@ -3,11 +3,36 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Common\Core\Controller;
+use App\Comment;
 class CommentController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        return 'index';
+        return $id.' index';
+    }
+
+    public function show($id)
+    {
+        return 'show';
+    }
+
+    public function update($id)
+    {
+        return 'update';
+    }
+    
+    public function store(Request $request){
+        $comment = new Comment;
+        $comment->title_id = $request->title_id;
+        $comment->user_id = $request->user_id;
+        $comment->comment = $request->comment;
+        $comment->season = $request->season;
+        $comment->episode = $request->episode;
+        $comment->save();
+    }
+
+    public function destroy(){
+        return 'destroy';
     }
 }

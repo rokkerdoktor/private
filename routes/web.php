@@ -14,8 +14,12 @@ Route::group(['prefix' => 'secure'], function () {
     Route::delete('titles/credits/{id}', 'TitleCreditController@destroy');
     Route::put('titles/{id}', 'TitlesController@update');
     Route::delete('titles', 'TitlesController@destroy');
-/////Test
-//Testlaptop
+    //Comment
+    Route::get('comment/{id}', 'CommentController@index');
+    Route::get('comment/show/{id}', 'CommentController@show');
+    Route::post('comment', 'CommentController@store');
+    Route::put('comment/{id}', 'CommentController@update');
+    Route::delete('comment', 'CommentController@destroy');
     // seasons
     Route::post('titles/{titleId}/seasons', 'SeasonsController@store');
     Route::delete('seasons/{seasonId}', 'SeasonsController@destroy');
