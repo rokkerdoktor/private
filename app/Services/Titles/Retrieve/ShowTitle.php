@@ -10,6 +10,7 @@ use App\Title;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Arr;
+use App\Helper\Urlmake;
 
 class ShowTitle
 {
@@ -24,7 +25,6 @@ class ShowTitle
 
         if ($title->needsUpdating() && !Arr::get($params, 'skipUpdating')) {
             $data = app(DataProvider::class)->getTitle($title);
-            $title = app(StoreTitleData::class)->execute($title, $data);
         }
 
         if (isset($params['minimal'])) {
@@ -62,9 +62,10 @@ class ShowTitle
                 return $episodeNumber === $episode->episode_number;
             })->load('credits', 'videos');
         }
-
-        $response = ['title' => $title];
-
+        
+        $response = ['title' => $title, 'asd' => 'asd' ];
+        //New title attribute
+        $response["title"]->urlkey=Urlmake::urlmake($title->id);
         // load next and last episode to air
         if ($title->is_series && !$title->series_ended) {
             $episodes = $title->getLastAndNextEpisodes();
