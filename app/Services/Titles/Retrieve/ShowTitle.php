@@ -32,7 +32,8 @@ class ShowTitle
         }
 
         $videos = Arr::get($params, 'allVideos') ? 'allVideos' : 'videos';
-        $title->load(['images', $videos, 'genres', 'seasons' => function(HasMany $query) {
+        $comments = Arr::get($params, 'allComments') ? 'allComments' : 'comments';
+        $title->load(['comments','images', $videos, 'genres', 'seasons' => function(HasMany $query) {
             $query->select(['id', 'number', 'episode_count', 'title_id']);
         }]);
 
@@ -63,7 +64,7 @@ class ShowTitle
             })->load('credits', 'videos');
         }
         
-        $response = ['title' => $title, 'asd' => 'asd' ];
+        $response = ['title' => $title];
         //New title attribute
         $response["title"]->urlkey=Urlmake::urlmake($title->id);
         // load next and last episode to air

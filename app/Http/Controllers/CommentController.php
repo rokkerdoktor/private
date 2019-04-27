@@ -9,7 +9,8 @@ class CommentController extends Controller
 {
     public function index($id)
     {
-        return $id.' index';
+        $comments = Comment::where('title_id', $id)->get();
+        return $comments;
     }
 
     public function show($id)
