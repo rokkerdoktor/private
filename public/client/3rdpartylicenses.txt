@@ -322,6 +322,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+@angular/material/card
+
 deepmerge
 MIT
 The MIT License (MIT)
@@ -429,8 +431,6 @@ MIT
 @angular/material/button
 
 @angular/material/sidenav
-
-@angular/material/form-field
 
 @ngxs/store
 MIT
@@ -634,6 +634,8 @@ SOFTWARE.
 @angular/material/chips
 
 @angular/material/sort
+
+@angular/material/form-field
 
 @angular/material/select
 
