@@ -8,9 +8,9 @@
 
 @section('angular-scripts')
     {{--angular scripts begin--}}
-		<script type="text/javascript" src="client/runtime.674b5720fe8717be8c72.js"></script>
+		<script type="text/javascript" src="client/runtime.bfc0a7e494bb5b3c3dc6.js"></script>
 		<script type="text/javascript" src="client/polyfills.61b2af6cd23ad5f1124f.js"></script>
-		<script type="text/javascript" src="client/main.474f353ca9b609ffea17.js"></script>
+		<script type="text/javascript" src="client/main.deb4782049a0d88b63bf.js"></script>
 	{{--angular scripts end--}}
 @endsection
 
