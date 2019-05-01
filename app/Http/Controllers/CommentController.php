@@ -21,11 +21,7 @@ class CommentController extends Controller
     public function update(Request $request,$id)
     {
         $comment = Comment::findOrFail($id);
-        $comment->title_id = $request->title_id;
-        $comment->user_id = $request->user_id;
         $comment->comment = $request->comment;
-        $comment->season = $request->season;
-        $comment->episode = $request->episode;
         $comment->save();
 
     }

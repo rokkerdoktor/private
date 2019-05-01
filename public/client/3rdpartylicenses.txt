@@ -322,8 +322,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-@angular/material/card
-
 deepmerge
 MIT
 The MIT License (MIT)
@@ -502,6 +500,8 @@ END OF TERMS AND CONDITIONS
 @angular/material/slide-toggle
 
 @angular/material/table
+
+@angular/material/card
 
 @angular/material/dialog
 
