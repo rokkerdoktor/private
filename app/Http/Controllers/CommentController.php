@@ -10,7 +10,12 @@ class CommentController extends Controller
     public function index($id)
     {
         $comments = Comment::where('title_id', $id)->get();
-        return $comments;
+        foreach($comments as $details) 
+        {
+        $comments->user_name=$details->user->username;
+        }
+
+        return $comments->toJson();
     }
 
     public function show($id)
