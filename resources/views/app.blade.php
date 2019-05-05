@@ -10,7 +10,7 @@
     {{--angular scripts begin--}}
 		<script type="text/javascript" src="client/runtime.1d838bbab390965e7db7.js"></script>
 		<script type="text/javascript" src="client/polyfills.61b2af6cd23ad5f1124f.js"></script>
-		<script type="text/javascript" src="client/main.a659b76eab2644ee2503.js"></script>
+		<script type="text/javascript" src="client/main.c5270f3a9bb134849f08.js"></script>
 	{{--angular scripts end--}}
 @endsection
 
