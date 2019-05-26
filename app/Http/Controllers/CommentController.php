@@ -19,6 +19,17 @@ class CommentController extends Controller
         return $comments->toJson();
     }
 
+    public function episode($id,$evad,$epizod)
+    {
+        $comments = Comment::where('title_id', $id)->where('season', $evad) ->where('episode', $epizod) ->get();
+        foreach($comments as $details) 
+        {
+        $comments->user_name=$details->user->username;
+        }
+
+        return $comments->toJson();
+    }
+
     public function show($id)
     {
         return Comment::FindOrFail($id);
