@@ -32,7 +32,7 @@ class ShowTitle
         }
 
         $videos = Arr::get($params, 'allVideos') ? 'allVideos' : 'videos';
-        $title->load(['comments','images', $videos, 'genres', 'seasons' => 
+        $title->load(['links','comments','images', $videos, 'genres', 'seasons' => 
         function(HasMany $query) {
             $query->select(['id', 'number', 'episode_count', 'title_id']);
         }]);
