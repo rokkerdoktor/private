@@ -50,7 +50,8 @@ class LinkController extends Controller
         $links->quality=$request->quality;
         $links->user_name=$request->user_name;
         $links->label=$request->label;
-        $comment->save();
+        $links->title_id=$request->title_id;
+        $links->save();
     }
 
     public function destroy($id){
