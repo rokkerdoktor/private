@@ -19,7 +19,8 @@ $username=get_string_between($env,"DB_USERNAME="," DB_PASSWORD=");
 $userpassword=get_string_between($env,"DB_PASSWORD="," DB_STRICT_MODE=");
 $db=get_string_between($env,"DB_DATABASE="," DB_USERNAME=");
 error_reporting(0);
- $connect = mysqli_connect($host, $username, $userpassword, $db);  
+/*  $connect = mysqli_connect($host, $username, $userpassword, $db);   */
+$connect = mysqli_connect("localhost", "godevcew_filmgo", "sma4gda19p", "godevcew_filmgo"); 
  mysqli_set_charset($connect,"utf8");
  $number = count($_POST["link"]);  
  if($number > 0)  
@@ -75,7 +76,7 @@ SELECT
 WHERE NOT EXISTS (SELECT * FROM `links` 
       WHERE title_id='".$id."' AND url='".$links2."') 
 LIMIT 1"; 
-$sql2="UPDATE titles SET updated_at='".date("Y.m.d. H:i",time())."' ,link_minoseg='".$_POST["minoseg"][0]."',link_nyelv='".$_POST["hang"][0]."' WHERE id='".$id."'";
+$sql2="UPDATE titles SET updated_at='".date("Y.m.d. H:i",time())."' ,links_quality='".$_POST["minoseg"][0]."',links_language='".$_POST["hang"][0]."' WHERE id='".$id."'";
 	 			if(!empty($_POST["episode"][$i])) {
 				mysqli_query($connect, $sqlevad); 
 				mysqli_query($connect, $sqlepizod);  }
