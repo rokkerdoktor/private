@@ -20,7 +20,7 @@ $userpassword=get_string_between($env,"DB_PASSWORD="," DB_STRICT_MODE=");
 $db=get_string_between($env,"DB_DATABASE="," DB_USERNAME=");
 error_reporting(0);
 /*  $connect = mysqli_connect($host, $username, $userpassword, $db);   */
-$connect = mysqli_connect("localhost", "godevcew_filmgo", "sma4gda19p", "godevcew_filmgo"); 
+$connect = mysqli_connect("localhost", "root", "", "mate"); 
  mysqli_set_charset($connect,"utf8");
  $number = count($_POST["link"]);  
  if($number > 0)  

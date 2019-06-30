@@ -15,6 +15,8 @@ Route::group(['prefix' => 'secure'], function () {
     Route::put('titles/{id}', 'TitlesController@update');
     Route::delete('titles', 'TitlesController@destroy');
     //Link
+    Route::get('linklist', 'LinkController@listnotapproved');
+    Route::put('linkapproved/{id}', 'LinkController@approved');
     Route::get('link/{id}', 'LinkController@index');
     Route::get('link/{id}/season/{evad}/episode/{epizod}', 'LinkController@episode');
     Route::get('link/show/{id}', 'LinkController@show');

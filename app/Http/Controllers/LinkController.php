@@ -58,4 +58,16 @@ class LinkController extends Controller
         $links = Link::findOrFail($id);
         $links->delete();
     }
+
+    public function approved($id){
+        $links = Link::findOrFail($id);
+        $links->approved=1;
+        $links->save();
+    }
+
+    public function listnotapproved(){
+        $links = Link::where("approved",0)->get();
+        return $links;
+
+    }
 }
